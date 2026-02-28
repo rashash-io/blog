@@ -1,14 +1,18 @@
+"use client"
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Button, buttonVariants } from '@/components/ui/button'
+import { ModeToggle } from './theme-toggle'
 
 const NavBar = () => {
     return (
         <>
-            <nav className='border flex items-center justify-between m-6 p-10'>
+            <nav className=' flex items-center justify-between px-8 py-2 sticky top-0 z-10 border-b-4 bg-background/80 backdrop-blur-sm'>
                 <Image src="/redLogo.png" alt="RA$HASH Logo" width={72} height={72} />
-                <ul className='flex justify-center space-x-4 border'>
-                    <li className='mx-10 border border-amber-500'>
+                <ul className='flex justify-center items-center space-x-4 font-bold text-lg'>
+                    <li className=''>
                         <Link href="/">Home</Link>
                     </li>
                     <li>
@@ -17,9 +21,15 @@ const NavBar = () => {
                     <li>
                         <Link href="/blog">Blog</Link>
                     </li>
+                    <li className='buttons flex items-center space-x-2'>
+                        <Link href={"/login"} className={buttonVariants({ variant: "outline" })}>Login</Link>
+                        <Link href={"/signup"} className={buttonVariants({ variant: "outline" })}>Sign Up</Link>
+                    </li>
+                    <li>
+                        <ModeToggle />
+                    </li>
                 </ul>
             </nav>
-            <div className='h-12'>NavBar</div>
         </>
     )
 }
