@@ -5,8 +5,6 @@ description: Comprehensive guide on learning C++ programming from basics to adva
 imageUrl: /images/cpp.png
 ---
 
-# C++ Programming Tutorial: A Comprehensive Guide
-
 Welcome to this comprehensive C++ programming tutorial! Whether you're a complete beginner or seeking to advance your C++ skills, this guide will walk you through the basics and help you dive into more advanced concepts as you progress.
 
 ## Introduction to C++

@@ -11,8 +11,11 @@ import remarkRehype from "remark-rehype"
 import rehypeRaw from "rehype-raw"
 import rehypeStringify from "rehype-stringify"
 import rehypeHighlight from "rehype-highlight"
+import rehypeSlug from 'rehype-slug';
 import matter from 'gray-matter';
 import fs from 'fs';
+import Onthispage from '@/components/Onthispage';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 export const BlogPost = async ({ params }: { params: Promise<{ slug: string }> }) => {
     const { slug } = await params;
@@ -21,6 +24,8 @@ export const BlogPost = async ({ params }: { params: Promise<{ slug: string }> }
         .use(remarkParse)
         .use(remarkRehype)
         .use(rehypeStringify)
+        .use(rehypeAutolinkHeadings)
+        .use(rehypeSlug)
 
 
     const filePath = `content/${slug}.md`
@@ -29,9 +34,18 @@ export const BlogPost = async ({ params }: { params: Promise<{ slug: string }> }
     const htmlContent = (await processor.process(content)).toString();
     return (
         <>
-            <MaxWidthWrapper className="prose dark:prose-invert">
-                <div className="text-xl font-bold">{data.title}</div>
-                <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
+            <MaxWidthWrapper className='prose dark:prose-invert'>
+                <div className='flex'>
+                    <div className='px-16'>
+                        <h1>{data.title}</h1>
+                        <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
+                    </div>
+                    <Onthispage className="text-sm w-[50%]" htmlContent={htmlContent} />
+                </div>
+                <div>
+
+                </div>
+
             </MaxWidthWrapper>
             <div>Blogpost {slug}</div>
         </>

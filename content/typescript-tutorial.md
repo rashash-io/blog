@@ -1,10 +1,8 @@
 ---
-title: TypeScript Tutorial
+title: Introduction to TypeScript
 slug: typescript-tutorial
 description: Comprehensive guide on learning TypeScript from basics to advanced topics.  
 ---
-
-# Introduction to TypeScript
 
 TypeScript is a powerful, statically typed superset of JavaScript that adds optional static types, interfaces, and more to the language. It's designed to help developers build large-scale applications with more reliability and easier code maintenance.
 

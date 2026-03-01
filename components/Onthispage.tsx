@@ -37,10 +37,10 @@ const Onthispage = ({ htmlContent, className }: { htmlContent: string, className
   }, [htmlContent])
 
   return (
-    <div className={cn('hidden md:block ', className)}>
-      <div className="sticky top-20">
+    <div className={cn(' md:block ', className)}>
+      <div className="sticky top-32">
         <h2>On This Page </h2>
-        <ul className='not-prose text-xs'>
+        <ul className='not-prose text-sm'>
           {links && links.map((link) => {
             return <li key={link.id} className='pt-1'>
               <a href={`#${link.id}`}>{link.text.slice(0, 50)}

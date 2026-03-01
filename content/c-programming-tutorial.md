@@ -5,8 +5,6 @@ description: Comprehensive guide on learning C programming from basics to advanc
 imageUrl: /images/coding.jpeg
 ---
 
-# C Programming Tutorial: A Comprehensive Guide
-
 Welcome to this comprehensive C programming tutorial! Whether you're a complete beginner or looking to deepen your understanding of C, this guide will take you through the fundamentals and introduce advanced concepts as you progress.
 
 ## Introduction to C

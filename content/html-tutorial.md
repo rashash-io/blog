@@ -5,8 +5,6 @@ description: Comprehensive guide on learning HTML, from the basics of structurin
 imageURl: https://images.pexels.com/photos/19387205/pexels-photo-19387205/free-photo-of-laptop-by-monitor-on-desk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
 ---
 
-# HTML Tutorial: A Comprehensive Guide
-
 Welcome to this comprehensive HTML tutorial! This guide will help you understand the fundamentals of HTML (HyperText Markup Language) and teach you how to create well-structured web pages. Whether you’re a complete beginner or looking to refine your skills, this tutorial covers everything from the basics to advanced topics.
 
 ## Introduction to HTML

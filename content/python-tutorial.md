@@ -4,8 +4,6 @@ slug: python-tutorial
 description: Comprehensive guide on learning Python from basics to advanced topics.
 ---
 
-# Python Tutorial: A Comprehensive Guide
-
 Welcome to this comprehensive Python tutorial! Whether you're a complete beginner or looking to brush up on your Python skills, this guide will take you through the basics and gradually introduce advanced topics.
 
 ## Introduction to Python

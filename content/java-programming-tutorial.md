@@ -4,8 +4,6 @@ slug: java-programming-tutorial
 description: Comprehensive guide on learning Java programming from basics to advanced topics.
 ---
 
-# Java Programming Tutorial: A Comprehensive Guide
-
 Welcome to this comprehensive Java programming tutorial! Whether you're a beginner or looking to enhance your Java skills, this guide will walk you through the basics and help you dive into more advanced concepts as you progress.
 
 ## Introduction to Java

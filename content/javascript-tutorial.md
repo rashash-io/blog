@@ -1,10 +1,8 @@
 ---
-title: JavaScript Tutorial
+title: JavaScript Tutorial - A Comprehensive Guide
 slug: javascript-tutorial
 description: Comprehensive guide on learning JavaScript, from the basics of syntax and functions to advanced topics like asynchronous programming and frameworks.
 ---
-
-# JavaScript Tutorial: A Comprehensive Guide
 
 Welcome to this comprehensive JavaScript tutorial! Whether you're new to programming or looking to enhance your skills, this guide will cover everything from the basics of JavaScript syntax to more advanced concepts and techniques.
 

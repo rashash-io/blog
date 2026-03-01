@@ -5,8 +5,6 @@ description: Comprehensive guide on learning CSS, from styling basics to advance
 imageUrl: https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
 ---
 
-# CSS Tutorial: A Comprehensive Guide
-
 Welcome to this comprehensive CSS tutorial! This guide will help you master the art of styling websites using CSS (Cascading Style Sheets). Whether you're a beginner or looking to expand your knowledge, this tutorial covers everything from basic styles to advanced layout techniques and animations.
 
 ## Introduction to CSS
