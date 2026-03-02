@@ -16,7 +16,8 @@ import matter from 'gray-matter';
 import fs from 'fs';
 import Onthispage from '@/components/Onthispage';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-
+import { rehypePrettyCode } from "rehype-pretty-code";
+import { transformerCopyButton } from "@rehype-pretty/transformers";
 export const BlogPost = async ({ params }: { params: Promise<{ slug: string }> }) => {
     const { slug } = await params;
 
@@ -26,6 +27,17 @@ export const BlogPost = async ({ params }: { params: Promise<{ slug: string }> }
         .use(rehypeStringify)
         .use(rehypeAutolinkHeadings)
         .use(rehypeSlug)
+        .use(rehypePrettyCode, {
+            theme: "material-theme-ocean",
+            transformers: [
+                transformerCopyButton(
+                    {
+                        visibility: 'always',
+                        feedbackDuration: 3000,
+                    }
+                )
+            ]
+        })
 
 
     const filePath = `content/${slug}.md`

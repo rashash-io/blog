@@ -86,7 +86,7 @@ export function Hero() {
                 <h1 className=" text-3xl md:text-5xl font-bold tracking-tight leading-tight">
                     RA$HASH's Blog
                 </h1>
-                <p className="mt-6 text-sm md:text-md max-w-2xl border w-full ">
+                <p className="mt-6 text-sm md:text-md max-w-2xl w-full ">
                     This is a blog about programming, web development, and technology. Here you will find articles, tutorials, and insights on various programming languages, frameworks, and tools. Whether you're a beginner or an experienced developer, there's something for everyone to learn and explore in the world of coding.
                 </p>
             </div>
