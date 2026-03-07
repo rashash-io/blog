@@ -1,8 +1,5 @@
 import React from 'react'
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-
-
-
 import { unified } from "unified"
 import remarkParse from "remark-parse"
 import remarkFrontmatter from "remark-frontmatter"
@@ -18,6 +15,16 @@ import Onthispage from '@/components/Onthispage';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { rehypePrettyCode } from "rehype-pretty-code";
 import { transformerCopyButton } from "@rehype-pretty/transformers";
+import { Metadata, ResolvingMetadata } from 'next'
+
+
+type Props = {
+    params: { slug: string, title: string, description: string }
+    searchParams: { [key: string]: string | string[] | undefined }
+}
+
+
+
 export const BlogPost = async ({ params }: { params: Promise<{ slug: string }> }) => {
     const { slug } = await params;
 
@@ -65,6 +72,23 @@ export const BlogPost = async ({ params }: { params: Promise<{ slug: string }> }
 }
 
 
+
+
+export async function generateMetadata(
+    { params, searchParams }: Props,
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const { slug } = await params;
+    // read route params 
+    const filePath = `content/${slug}.md`
+    const fileContent = fs.readFileSync(filePath, "utf-8");
+    const { data } = matter(fileContent)
+    return {
+        title: `${data.title} - RA$HASH`,
+        description: data.description
+    }
+
+}
 
 export default BlogPost
 

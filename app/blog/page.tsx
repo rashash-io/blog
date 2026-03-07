@@ -4,7 +4,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import fs, { readFileSync } from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
-import { Metadata } from "next";
+import type { Metadata } from 'next'
 
 interface BlogType {
     slug: string;
@@ -15,7 +15,6 @@ interface BlogType {
 };
 
 const dirContent = fs.readdirSync("content", "utf-8")
-console.log(dirContent)
 
 const blogs: BlogType[] = dirContent.map(file => {
     const fileContent = readFileSync(`content/${file}`, "utf-8");
@@ -29,7 +28,6 @@ const blogs: BlogType[] = dirContent.map(file => {
     return value
 })
 
-console.log(blogs)
 
 
 const BlogList = () => {
@@ -42,7 +40,7 @@ const BlogList = () => {
                     {blogs.map((blog: BlogType, index: number) => (
                         <div
                             key={index}
-                            className="shadow-lg rounded-lg overflow-hidden border border-4 border-blue-900/50"
+                            className="shadow-lg rounded-lg overflow-hidden  border-4 border-blue-900/50"
                         >
                             <img
                                 className="w-full h-64 object-cover object-top"
@@ -70,17 +68,17 @@ const BlogList = () => {
 
 
 
-// export const metadata: Metadata = {
-//     title: 'Blogs - ProgrammingWithHarry',
-//     description: 'A comprehensive blog for coders of all levels, from beginners to advanced. Explore tutorials, tips, and insights on a wide range of programming languages and technologies. Stay up-to-date with the latest trends in software development, learn best practices, and enhance your coding skills with in-depth articles and guides.',
-// }
+export const metadata: Metadata = {
+    title: 'RA$HASH | Blog',
+    description: 'A comprehensive blog for coders of all levels, from beginners to advanced. Explore tutorials, tips, and insights on a wide range of programming languages and technologies. Stay up-to-date with the latest trends in software development, learn best practices, and enhance your coding skills with in-depth articles and guides.',
+}
 
 
 export function Hero() {
     return (
         <section className="relative py-10 flex items-center justify-center overflow-hidden bg-background ">
             {/* Grid Overlay */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-size-[40px_40px]"></div>
             {/* Content */}
             <div className="flex flex-wrap px-6 max-w-4xl  w-full">
                 <h1 className=" text-3xl md:text-5xl font-bold tracking-tight leading-tight">

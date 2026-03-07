@@ -24,7 +24,7 @@ To start using JavaScript, you need a web browser and a text editor. JavaScript 
 
 You can add JavaScript directly into your HTML file using the `<script>` tag.
 
-```html
+```html {1} showLineNumbers /alert/
 <!DOCTYPE html>
 <html>
 <head>
