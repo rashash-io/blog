@@ -1,3 +1,16 @@
+<div align="center">
+  <img alt="Logo" src="./public/logo1000.webp" width="100" />
+</div>
+
+<h1 align="center">
+  Simple Blog Project
+</h1>
+
+<div align="center">
+  <img src="./public/preview.png"/>
+</div>
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
